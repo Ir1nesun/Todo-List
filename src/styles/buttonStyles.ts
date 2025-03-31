@@ -1,7 +1,7 @@
 import { Button } from "@mui/material";
 import styled from "styled-components";
 
-export const StyledButton = styled(Button)`
+export const StyledButton = styled(Button)` //Базовая кнопка
   && {
     min-width: auto;
     height: 32px;
@@ -9,6 +9,7 @@ export const StyledButton = styled(Button)`
     padding: 4px 12px;
     border-radius: 6px;
     text-transform: none;
+    margin-top: 8px;
 
     &:hover {
       background-color: ${({ theme }) => (theme.button === "#1976d2" ? "#1255a2" : "#8a52ff")};
@@ -17,13 +18,13 @@ export const StyledButton = styled(Button)`
   }
 `;
 
-export const ButtonContainer = styled.div`
+export const ButtonContainer = styled.div` //Контейнер для кнопок
   display: flex;
   justify-content: space-between;
   width: 100%;
 `;
 
-export const SortButton = styled(StyledButton)`
+export const SortButton = styled(StyledButton)` //Кнопка сортировки
   && {
     width: 100%;
     height: 36px;
@@ -44,7 +45,7 @@ export const SortButton = styled(StyledButton)`
   }
 `;
 
-export const AddButton = styled(Button)`
+export const AddButton = styled(Button)` //Кнопка добавления
   && {
     height: 56px;
     font-size: 16px;
@@ -65,7 +66,7 @@ export const AddButton = styled(Button)`
   }
 `;
 
-export const SmallButton = styled(StyledButton)`
+export const SmallButton = styled(StyledButton)` //Маленькая кнопка
   && {
     min-width: auto;
     height: 32px;

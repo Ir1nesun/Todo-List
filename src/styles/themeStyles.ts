@@ -1,7 +1,7 @@
 import { Switch } from "@mui/material";
 import styled from "styled-components";
 
-export const ThemeSwitchContainer = styled.div`
+export const ThemeSwitchContainer = styled.div` 
  display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -12,7 +12,7 @@ export const ThemeSwitchContainer = styled.div`
   left: 20px;
 `;
 
-export const ThemeSwitch = styled(Switch)`
+export const ThemeSwitch = styled(Switch)`  
   && {
     width: 48px;
     height: 28px;

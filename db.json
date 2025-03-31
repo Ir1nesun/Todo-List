@@ -1,0 +1,29 @@
+{
+  "todos": [
+    {
+      "id": "1",
+      "text": "Купить молоко",
+      "completed": false,
+      "createdAt": "2024-03-25T10:00:00.000Z"
+    },
+    {
+      "id": "2",
+      "text": "Почитать книгу",
+      "completed": true,
+      "createdAt": "2024-03-25T11:00:00.000Z"
+    },
+    {
+      "text": "Много кодить",
+      "completed": false,
+      "createdAt": "2025-03-28T09:38:48.742Z",
+      "id": "NPpB5uv"
+    }
+  ],
+  "users": [
+    {
+      "email": "test25@mail.com",
+      "password": "$2a$10$WhuMlGTUVgcgYMzPWFjdt.Bt1Ibr/z7OV.B4uBk43H9CkZsiHSeRe",
+      "id": 6
+    }
+  ]
+}

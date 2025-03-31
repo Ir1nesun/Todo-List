@@ -5,34 +5,34 @@ import { ThemeSwitchContainer, ThemeSwitch } from "../styles/themeStyles";
 import { LightMode, DarkMode } from "@mui/icons-material";
 import { GlobalStyles } from "../styles/globalStyles"; 
 
-const ThemeContext = createContext({
-  theme: "light",
-  toggleTheme: () => {},
-});
+const ThemeContext = createContext({ 
+  theme: "light", 
+  toggleTheme: () => {}, 
+}); 
 
-export const ThemeProviderComponent = ({ children }: { children: ReactNode }) => {
-  const [theme, setTheme] = useState("light");
+export const ThemeProviderComponent = ({ children }: { children: ReactNode }) => { 
+  const [theme, setTheme] = useState("light"); 
 
-  useEffect(() => {
-    const savedTheme = localStorage.getItem("theme");
+  useEffect(() => { 
+    const savedTheme = localStorage.getItem("theme"); 
     if (savedTheme) {
       setTheme(savedTheme);
     }
-  }, []);
+  }, []); 
 
-  const toggleTheme = () => {
+  const toggleTheme = () => { 
     const newTheme = theme === "light" ? "dark" : "light";
     setTheme(newTheme);
-    localStorage.setItem("theme", newTheme);
+    localStorage.setItem("theme", newTheme); 
   };
 
   return (
-    <ThemeContext.Provider value={{ theme, toggleTheme }}>
+    <ThemeContext.Provider value={{ theme, toggleTheme }}> 
       <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
-        <GlobalStyles /> 
-        <ThemeSwitchContainer>
+        <GlobalStyles />  
+        <ThemeSwitchContainer> 
           {theme === "light" ? <LightMode fontSize="large"/> : <DarkMode fontSize="large"/>}
-          <ThemeSwitch checked={theme === "dark"} onChange={toggleTheme} />
+          <ThemeSwitch checked={theme === "dark"} onChange={toggleTheme} /> 
         </ThemeSwitchContainer>
         {children}
       </ThemeProvider>
@@ -41,3 +41,4 @@ export const ThemeProviderComponent = ({ children }: { children: ReactNode }) =>
 };
 
 export const useTheme = () => useContext(ThemeContext);
+

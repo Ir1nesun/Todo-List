@@ -17,7 +17,7 @@ export const TaskList = styled.ul`
   margin-top: 20px;
 `;
 
-export const TaskItem = styled.li`
+export const TaskItem = styled.li` 
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -36,7 +36,7 @@ export const TaskItem = styled.li`
   }
 `;
 
-export const TaskText = styled.span`
+export const TaskText = styled.span` 
   width: 100%;
   word-wrap: break-word;
   margin-bottom: 10px; 
@@ -51,18 +51,18 @@ export const TaskRow = styled.div`
 
   & input[type="checkbox"] {
     transform: scale(1.1);
-    vertical-align: middle;
+    vertical-align: middle; 
     margin-top: -8px;
   }
 `;
 
-export const ButtonContainer = styled.div`
+export const ButtonContainer = styled.div` 
   display: flex;
   justify-content: space-between;
   width: 100%;
 `;
 
-export const TaskDate = styled.span`
+export const TaskDate = styled.span` 
   font-size: 12px;
   color: ${({ theme }) => (theme.background === "#333" ? "#bbb" : "#666")};
   margin-bottom: 6px;
@@ -70,18 +70,18 @@ export const TaskDate = styled.span`
   text-align: right;
 `;
 
-export const FilterContainer = styled.div`
+export const FilterContainer = styled.div` 
   display: flex;
   gap: 10px;
   margin-bottom: 15px;
   margin-top: 15px;
 `;
 
-export const FilterButton = styled.button<{ active: boolean }>`
+export const FilterButton = styled.button<{ $active: boolean }>` 
   padding: 6px 12px;
   border-radius: 6px;
-  background-color: ${({ active, theme }) => (active ? theme.button : "transparent")};
-  color: ${({ active, theme }) => (active ? "#fff" : theme.text)};
+  background-color: ${({ $active }) => ($active ? "#1976d2" : "transparent")};
+  color: ${({ $active }) => ($active ? "#fff" : "#555")};
   border: 1px solid ${({ theme }) => theme.border};
   cursor: pointer;
   transition: 0.3s;
